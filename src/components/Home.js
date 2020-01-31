@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { Component } from "react";
 
-//build stateful component 
 //  fetch req. to API end point to launch lambda method to interact with dynamo 
 
-//
+const  API_INVOKE_URL = "https://stnvyur8of.execute-api.us-east-1.amazonaws.com/prod";
 
+class Home extends Component {
+  constructor() {
+    super();
+  this.state = {
+    apiCall: null
+  };
 
-export default function Home() {
-  return (
-    <div>
-        <h1>Welcome</h1>
-    </div>
-  )
+  fetch(API_INVOKE_URL+'/products')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  });
 }
+
+  render(){
+    return(
+      <div>
+      <h1>Welcome</h1>
+      </div>
+    )
+  }
+}
+
+export default Home;
