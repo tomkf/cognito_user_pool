@@ -31,7 +31,6 @@ class Home extends Component {
  return (<div className="product-container"> {products} </div>)
 }
 
-
   render(){
     return(
       <div>
