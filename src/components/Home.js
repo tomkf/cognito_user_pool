@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Card from 'react-bootstrap/Card';
 
-const  API_INVOKE_URL = "https://stnvyur8of.execute-api.us-east-1.amazonaws.com/prod";
+const  API_INVOKE_URL = "https://stnvyur8of.execute-api.us-east-1.amazonaws.com/prod/products";
 
 class Home extends Component {
   constructor() {
@@ -11,7 +11,7 @@ class Home extends Component {
     render: false
   };
 
-  fetch(API_INVOKE_URL+'/products')
+  fetch(API_INVOKE_URL)
   .then(response => response.json())
   .then(data => {
     this.setState({ apiCall: JSON.parse(data.body), render: true })
@@ -20,17 +20,17 @@ class Home extends Component {
 
  renderProducts(productArray){
   let products = productArray.map(product => (
-     <Card style={{ width: '18rem' }}>
-   <Card.Title>{product.make}</Card.Title>
-   <Card.Title>{product.name}</Card.Title>
-   <Card.Img variant="top" src={product.img} />
+     <Card style={{ width: '18rem'}} className="product-card">
+   <Card.Title>{product.make} {product.name}</Card.Title>
+   <Card.Img variant="top" src={product.img} style={{width: '300px', height: '350px'}} />
       <Card.Body>
   </Card.Body>
  </Card>
   ))
 
- return (<div> {products} </div>)
+ return (<div className="product-container"> {products} </div>)
 }
+
 
   render(){
     return(

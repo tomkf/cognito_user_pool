@@ -26,3 +26,13 @@
 h1 {
   font-size: 2em;
 }
+
+.product-container {
+  margin: 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card{
+  margin-bottom: 4%;
+}
