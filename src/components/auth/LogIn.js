@@ -34,7 +34,6 @@ class LogIn extends Component {
         errors: { ...this.state.errors, ...error }
       });
     } else {
-      //Integrate Cognito here on valid form submission
       try {
         const user = await Auth.signIn(
           this.state.username,
