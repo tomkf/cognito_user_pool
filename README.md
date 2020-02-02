@@ -7,13 +7,13 @@
 </br>
 
 <h3> The API endpoint:</h3>
-<img src="aws_endpoint.png" />
+<img src="public/aws_endpoint.png" />
 <p> The single GET endpoint resolves a Lambda function, which preforms a scan on the AWS Dynamo DB of product items.</p>
 
 </br>
 
 <h3> The Dynamo Service:</h3>
-<img src="dynamo.png" />
+<img src="public/dynamo.png" />
 
 </br>
 </br>
