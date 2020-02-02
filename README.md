@@ -1,3 +1,25 @@
+<h1> Cognito User Pools in React: </h1>
+</br>
+</br>
+
+<p> This is a React client created as part of an exercise in gaining familiarity with AWS and the Cognito authentication framework. The application uses Cognito to verify and autheticate users. Once authenticated and logged in, the users can see a "shopping cart" result, which is data pulled from an AWS API portal. </p>
+</br>
+</br>
+
+<h3> The API endpoint:</h3>
+<img src="aws_endpoint.png" />
+<p> The single GET endpoint resolves a Lambda function, which preforms a scan on the AWS Dynamo DB of product items.</p>
+
+</br>
+
+<h3> The Dynamo Service:</h3>
+<img src="dynamo.png" />
+
+</br>
+</br>
+</br>
+</br>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
